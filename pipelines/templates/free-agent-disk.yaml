@@ -7,7 +7,7 @@ steps:
     targetType: 'inline'
     script: |
       set -x # debug
-      find / -type d -name "go1.11"
+      find / -type d -name "go*"
       df -h
       dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | tail -n 100
       sudo apt-get remove 'ghc.*'

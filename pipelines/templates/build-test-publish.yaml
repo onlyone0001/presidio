@@ -160,6 +160,9 @@ stages:
 
                 df -h
                 # install dev Pipfile libraries
+                rm -fr ~/Library/Caches/pip
+                rm -fr ~/Library/Caches/pipenv
+
                 cd presidio-analyzer
                 pipenv install --dev --sequential
 
@@ -173,8 +176,6 @@ stages:
 
                 # Azure pipelines test publish
                 # regex
-                rm -fr ~/Library/Caches/pip
-                rm -fr ~/Library/Caches/pipenv
                 pipenv install --dev --skip-lock regex pytest-azurepipelines
           - task: Bash@3  
             displayName: 'Install golang pre requisites'
