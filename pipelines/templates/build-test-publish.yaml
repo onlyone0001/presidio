@@ -129,6 +129,13 @@ stages:
       - job: BuildTest
         displayName: Build and Test
         steps:
+          - task: Bash@3  
+            displayName: 'Check sizes'
+            inputs:
+              targetType: 'inline'              
+              script: |
+                set -eux  # fail on error
+                sudo du / --max-depth=3
           - task: UsePythonVersion@0
             displayName: 'Use Python $(PYTHON.VERSION)'
             inputs:
@@ -299,6 +306,13 @@ stages:
       - job: SetBuildDep
         displayName: Set base container build
         steps:
+          - task: Bash@3  
+            displayName: 'Check sizes'
+            inputs:
+              targetType: 'inline'              
+              script: |
+                set -eux  # fail on error
+                sudo du / --max-depth=3
           - task: Bash@3
             displayName: 'Git diff verify deps build'
             inputs:
