@@ -161,8 +161,7 @@ stages:
                 df -h
                 # install dev Pipfile libraries
                 cd presidio-analyzer
-                # pipenv install --dev --sequential
-                pipenv sync --sequential
+                pipenv sync --dev --sequential
 
                 # install dependency libraries
                 # re2
