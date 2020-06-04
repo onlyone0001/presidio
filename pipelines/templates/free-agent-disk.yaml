@@ -10,13 +10,14 @@ steps:
       #sudo find / -type d -name "go*"
       df -h
       dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n | tail -n 100
-      # sudo apt-get remove 'ghc.*'
+      sudo apt-get remove 'ghc.*'
       # sudo apt-get remove 'llvm.*'
       # sudo apt-get remove 'zulu.*'
       # sudo apt-get remove 'dotnet.*'
       # sudo apt-get remove 'hhvm'
       sudo apt-get remove 'google-cloud-sdk'
       sudo apt-get remove 'firefox'
+      sudo apt-get remove 'google-chrome-stable'
       sudo apt-get autoremove
       sudo apt-get clean
       df -h
