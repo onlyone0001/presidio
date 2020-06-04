@@ -13,7 +13,7 @@ steps:
       # sudo apt-get remove 'ghc.*'
       # sudo apt-get remove 'llvm.*'
       # sudo apt-get remove 'zulu.*'
-      sudo apt-get remove 'dotnet.*'
+      # sudo apt-get remove 'dotnet.*'
       sudo apt-get remove 'hhvm'
       sudo apt-get remove 'google-cloud-sdk'
       sudo apt-get remove 'firefox'

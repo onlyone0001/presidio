@@ -160,11 +160,9 @@ stages:
 
                 df -h
                 # install dev Pipfile libraries
-                rm -fr ~/Library/Caches/pip
-                rm -fr ~/Library/Caches/pipenv
-
                 cd presidio-analyzer
-                pipenv install --dev --sequential
+                # pipenv install --dev --sequential
+                pipenv sync --sequential
 
                 # install dependency libraries
                 # re2
